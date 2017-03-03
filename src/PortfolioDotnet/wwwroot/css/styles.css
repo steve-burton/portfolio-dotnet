@@ -1,0 +1,7 @@
+﻿body {
+    background-image: url(../img/motorcycle-background.jpg);
+    /*background-size: 1650px;*/
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
