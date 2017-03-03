@@ -16,6 +16,14 @@ ul.nav {
     margin-top: 4px;
 }
 
+ul.nav li {
+    margin-right: 5px;
+}
+
+div.header ul.nav li a:hover {
+    cursor: pointer;
+}
+
 img.steve {
     width: 200px;
     float: right;
@@ -29,6 +37,7 @@ div.intro {
     margin-top: 35px;
     margin-bottom: 50px;
     color: black;
+    border-radius: 5px;
 }
 
 div.intro p {
@@ -55,4 +64,5 @@ img.john-day {
     width: 300px;
     float: right;
     margin-left: 20px;
+    border-radius: 4px;
 }
