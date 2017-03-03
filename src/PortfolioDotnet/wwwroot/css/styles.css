@@ -1,7 +1,24 @@
 ﻿body {
     background-image: url(../img/motorcycle-background.jpg);
-    /*background-size: 1650px;*/
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Muli', sans-serif;
 }
+
+div.header h1 {
+  font-size: 8em;
+  font-weight: 200;
+  letter-spacing: .01em;
+}
+
+ul.nav {
+    margin-top: 4px;
+}
+
+img.steve {
+    width: 200px;
+    float: right;
+    margin-top: 15px;
+}
+
