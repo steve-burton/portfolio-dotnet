@@ -2,3 +2,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Portfolio - Projects";
 }
+@using PortfolioDotnet.Models
+@model List<Projects>
+
+<div class="intro"></div>
+<h3>Click the button below to see my most-starred projects on GitHub</h3>
+<form asp-controller="Projects" asp-action="GetProjects">   
+    <div class="show-projects">     
+        <input type="submit" class="waves-effect waves-light btn light-blue darken-1" value="Get projects" />
+    </div>
+</form>
+
+<div>
+    @foreach (var project in Model)
+    {      
+        <p>Url: @Html.DisplayFor(modelItem => project.StarredUrl)</p>
+    }
+</div>

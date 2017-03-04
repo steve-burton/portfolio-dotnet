@@ -6,13 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using PortfolioDotnet.Controllers;
 using PortfolioDotnet.Models;
 
-// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace PortfolioDotnet.Controllers
 {
     public class ProjectsController : Controller
     {
-        // GET: /<controller>/
         public IActionResult Index()
         {
             return View();
@@ -20,7 +18,7 @@ namespace PortfolioDotnet.Controllers
 
         public IActionResult GetProjects()
         {
-            var starredProjects = Projects.GetProjects();
+            Projects starredProjects = Projects.GetProjects();
             return View(starredProjects);
         }
     }

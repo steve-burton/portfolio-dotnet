@@ -6,12 +6,23 @@ using RestSharp;
 using RestSharp.Authenticators;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Diagnostics;
 
 namespace PortfolioDotnet.Models
 {
     public class Projects
     {
-        public static List<Projects> GetProjects()
+        public class Owner
+        {
+            public string Login { get; set; }
+            public string StarredUrl { get; set; }
+        }
+
+        //public string starred_url { get; set; }
+        //public class User
+        //{           
+        //}
+        public static List<Projects> GetProjects(string login, string starred_url)
         {
             var client = new RestClient("https://api.github.com");
             var request = new RestRequest("/users/steve-burton/starred/?client_id=" + EnvironmentVariables.ClientId + "&client_secret=" + EnvironmentVariables.ClientSecret, Method.GET);
@@ -22,7 +33,7 @@ namespace PortfolioDotnet.Models
                 response = await GetResponseContentAsync(client, request) as RestResponse;
             }).Wait();
             JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(response.Content);
-            var projectList = JsonConvert.DeserializeObject<List<Projects>>(jsonResponse["starred_url"].ToString());
+            var projectList = JsonConvert.DeserializeObject<List<Projects>>(jsonResponse["projects"].ToString());
 
             return projectList;
         }

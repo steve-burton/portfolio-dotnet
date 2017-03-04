@@ -11,18 +11,6 @@ This is a project to create a personal portfolio website using the Github API.
 ## Setup/Installation Requirements
 
 Clone this repository and open it in Visual Studio.
-* _**In SSMS:**_
-```
-Open SonOfCodSeafood.sql
-Add to the top of the file: CREATE DATABASE SonOfCodSeafood
-GO
-Go to the top of the query and hit execute
-```
-There is a dummy Admin in the database to get you started:<br>
-User name: johndoe@gmail.com<br>
-Password: Password-1
-
-Or to create your own database, in PowerShell navigate to the project and the directory containing the project.json file. In the command line, run "dotnet ef database restore" to complete the database migration.
 
 To run the program in VisualStudio, press the play button and view in your web browser.
 
