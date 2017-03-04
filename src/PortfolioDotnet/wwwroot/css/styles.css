@@ -68,11 +68,39 @@ img.john-day {
 }
 
 /* #### About page styling #### */
+div.about-headline {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 20px;
+    padding: 15px 30px 20px 30px;
+    color: black;
+    border-radius: 5px;
+}
+div.about-row {
+    width: 99%;
+    margin-right: auto;
+    margin-left: auto;
+}
 div.about {
     background-color: rgba(255, 255, 255, 0.6);
     padding: 15px 30px 20px 30px;
-    margin-top: 35px;
+    margin-top: 20px;
     margin-bottom: 50px;
     color: black;
     border-radius: 5px;
+}
+
+div.about p {
+  font-size: 1.1em;
+}
+
+div.about a {
+  color: darkblue;
+  padding: 0 3px 0 5px;
+  
+}
+
+div.about a:hover {
+  color: steelblue;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
 }
