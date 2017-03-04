@@ -12,6 +12,24 @@ This is a project to create a personal portfolio website using the Github API.
 
 Clone this repository and open it in Visual Studio.
 
+You'll need to add a file with a GitHub API key.
+
+Create the file: Models/EnvironmentVariables.cs
+
+The contents should look like this:
+
+```
+namespace PortfolioDotnet.Models
+{
+    public static class EnvironmentVariables
+    {
+        public static string ClientId = "Replace this string with your 'Client Id' from GitHub";
+        public static string ClientSecret = "Replace this string with your 'Client Secret' from GitHub";
+    }
+}
+
+```
+
 To run the program in VisualStudio, press the play button and view in your web browser.
 
 ## Known Bugs

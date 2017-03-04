@@ -15,5 +15,17 @@ namespace PortfolioDotnet.Controllers
         {
             return View();
         }
+
+        public IActionResult GetProjects()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult GetProjects()
+        {
+            Projects starredProjects = Projects.GetProjects();
+            return View(starredProjects);
+        }
     }
 }

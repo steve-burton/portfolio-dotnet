@@ -7,9 +7,9 @@
 }
 
 div.header h1 {
-  font-size: 8em;
-  font-weight: 200;
-  letter-spacing: .01em;
+    font-size: 8em;
+    font-weight: 200;
+    letter-spacing: .01em;
 }
 
 ul.nav {
@@ -76,7 +76,7 @@ div.about-headline {
     border-radius: 5px;
 }
 div.about-row {
-    width: 99%;
+    width: 99.5%;
     margin-right: auto;
     margin-left: auto;
 }
