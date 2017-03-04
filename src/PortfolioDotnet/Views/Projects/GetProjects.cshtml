@@ -8,10 +8,10 @@
 
 <div class="intro">
     <h3>Here are my most-starred projects</h3>
-    <div>
+    @*<div>
         @foreach (var project in Model)
         {
-            <p>Url: @Html.DisplayFor(modelItem => project.StarredUrl)</p>
+            <p>Url: @Html.DisplayFor(modelItem => project.data.name)</p>
         }
-    </div>
+    </div>*@
 </div>

@@ -68,25 +68,49 @@ img.john-day {
 }
 
 /* #### About page styling #### */
-div.about-headline {
-    background-color: rgba(255, 255, 255, 0.6);
+div.about-headline h1 {
+    /*background-color: rgba(204, 213, 221, 0.2);*/
+    /*padding: 15px 30px 20px 30px;
+    border-radius: 5px;*/
     margin-top: 20px;
-    padding: 15px 30px 20px 30px;
-    color: black;
-    border-radius: 5px;
+    font-size: 7em;
+    font-weight: 200;
+    color: white;
+    text-shadow: 2px 2px 20px black;
 }
 div.about-row {
-    width: 99.5%;
-    margin-right: auto;
-    margin-left: auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 div.about {
     background-color: rgba(255, 255, 255, 0.6);
     padding: 15px 30px 20px 30px;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 50px;
     color: black;
     border-radius: 5px;
+}
+div.projects {
+    padding-top: 22px;
+    width: 27%;
+}
+
+div.spacer-column {
+    width: 3%;
+}
+
+div.resume {
+    width: 70%;
+}
+
+div.projects h4 {
+    font-weight: 600;
+}
+
+div.resume h3 {
+    font-weight: 600;
 }
 
 div.about p {
