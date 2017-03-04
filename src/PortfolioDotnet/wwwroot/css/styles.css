@@ -66,3 +66,13 @@ img.john-day {
     margin-left: 20px;
     border-radius: 4px;
 }
+
+/* #### About page styling #### */
+div.about {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 15px 30px 20px 30px;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    color: black;
+    border-radius: 5px;
+}
