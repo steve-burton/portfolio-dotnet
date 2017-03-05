@@ -47,7 +47,6 @@ div.intro p {
 div.intro a {
   color: darkblue;
   padding: 0 3px 0 5px;
-  
 }
 
 div.intro a:hover {
@@ -69,21 +68,20 @@ img.john-day {
 
 /* #### About page styling #### */
 div.about-headline h1 {
-    /*background-color: rgba(204, 213, 221, 0.2);*/
-    /*padding: 15px 30px 20px 30px;
-    border-radius: 5px;*/
     margin-top: 20px;
     font-size: 7em;
     font-weight: 200;
     color: white;
     text-shadow: 2px 2px 20px black;
 }
+
 div.about-row {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
 }
+
 div.about {
     background-color: rgba(255, 255, 255, 0.6);
     padding: 15px 30px 20px 30px;
@@ -92,9 +90,16 @@ div.about {
     color: black;
     border-radius: 5px;
 }
+
 div.projects {
     padding-top: 22px;
     width: 27%;
+}
+
+div.projects img {
+    border-radius: 4px;
+    width: 100%;
+    margin: 10px 0px 3px 0px;
 }
 
 div.spacer-column {
@@ -119,12 +124,11 @@ div.about p {
 
 div.about a {
   color: darkblue;
-  padding: 0 3px 0 5px;
-  
 }
 
 div.about a:hover {
   color: steelblue;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 3px;
+  font-size: 1.02em;
 }
