@@ -24,9 +24,9 @@ namespace PortfolioDotnet.Controllers
         [HttpPost]
         public IActionResult GetProjects(Projects name)
         {
-            List<Projects> myList = Projects.GetProjects();
+            List<Projects> projectList = Projects.GetProjects();
 
-            return View(myList);
+            return View(projectList);
         }
     }
 }

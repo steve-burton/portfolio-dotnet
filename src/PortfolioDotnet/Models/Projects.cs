@@ -12,26 +12,27 @@ namespace PortfolioDotnet.Models
 {
     public class Projects
     {
-        //public class Owner
-        //{
-        //    public string login { get; set; }
-        //    public string starred_url { get; set; }
-        //}
+        public class Owner
+        {
+            public string Login { get; set; }
+            public string ReposUrl { get; set; }
+            public string StarredUrl { get; set; }
+        }
 
         public static List<Projects> GetProjects()
         {
             var client = new RestClient("https://api.github.com");
             var request = new RestRequest("/users/steve-burton/repos/starred/?client_id=" + EnvironmentVariables.ClientId + "&client_secret=" + EnvironmentVariables.ClientSecret, Method.GET);
-            Console.WriteLine("....................request: ...................................." + request);
             client.Authenticator = new HttpBasicAuthenticator(EnvironmentVariables.ClientId, EnvironmentVariables.ClientSecret);
             var response = new RestResponse();
             Task.Run(async () =>
             {
                 response = await GetResponseContentAsync(client, request) as RestResponse;
             }).Wait();
+            Console.WriteLine("....................request: ...................................." + request);
             JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(response.Content);
             var projectList = JsonConvert.DeserializeObject<List<Projects>>(jsonResponse["projects"].ToString());
-            Console.WriteLine("...........................project list: ............" + projectList);
+            Debug.WriteLine(projectList);
             return projectList;
         }
 
