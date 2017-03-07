@@ -22,7 +22,7 @@ namespace PortfolioDotnet.Controllers
         }
 
         [HttpPost]
-        public IActionResult GetProjects(Projects name)
+        public IActionResult GetProjects(Projects name, Projects html_url)
         {
             List<Projects> projectList = Projects.GetProjects();
 

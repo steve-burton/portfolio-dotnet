@@ -14,15 +14,14 @@ namespace PortfolioDotnet.Models
     {
         public class Owner
         {
-            public string Login { get; set; }
-            public string ReposUrl { get; set; }
-            public string StarredUrl { get; set; }
+            public string Name { get; set; }
+            public string HtmlUrl { get; set; }
         }
 
         public static List<Projects> GetProjects()
         {
             var client = new RestClient("https://api.github.com");
-            var request = new RestRequest("/users/steve-burton/repos/starred/?client_id=" + EnvironmentVariables.ClientId + "&client_secret=" + EnvironmentVariables.ClientSecret, Method.GET);
+            var request = new RestRequest("search/repositories?q=user:steve-burton&sort=stars:&order=desc&?page=3&per_page=3?client_id=" + EnvironmentVariables.ClientId + "&client_secret=" + EnvironmentVariables.ClientSecret, Method.GET);
             client.Authenticator = new HttpBasicAuthenticator(EnvironmentVariables.ClientId, EnvironmentVariables.ClientSecret);
             var response = new RestResponse();
             Task.Run(async () =>
