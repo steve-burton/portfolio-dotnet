@@ -7,11 +7,11 @@
 @model List<Projects>
 
 <div class="intro">
-    <h3>Here are my most-starred projects</h3>
+    <h3>Here are my three most-starred projects</h3>
     <div>
         @foreach (var project in Model)
         {
-            <p>Url: @Html.DisplayFor(modelItem => project.name)</p>
+            <p>@Html.DisplayFor(modelItem => project.Name)</p>
         }
     </div>
 </div>

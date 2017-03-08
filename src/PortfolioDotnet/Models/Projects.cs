@@ -11,27 +11,29 @@ using System.Diagnostics;
 namespace PortfolioDotnet.Models
 {
     public class Projects
-    {
-        public class Owner
-        {
-            public string Name { get; set; }
-            public string HtmlUrl { get; set; }
-        }
+    {      
+        public string Name { get; set; }
+        public string HtmlUrl { get; set; }
 
+        //public static List<JObject> GetProjects()
         public static List<Projects> GetProjects()
         {
             var client = new RestClient("https://api.github.com");
-            var request = new RestRequest("search/repositories?q=user:steve-burton&sort=stars:&order=desc&?page=3&per_page=3?client_id=" + EnvironmentVariables.ClientId + "&client_secret=" + EnvironmentVariables.ClientSecret, Method.GET);
-            client.Authenticator = new HttpBasicAuthenticator(EnvironmentVariables.ClientId, EnvironmentVariables.ClientSecret);
+            //var request = new RestRequest("search/repositories?q=user:steve-burton&sort=stars:&order=desc&?page=1&per_page=1?client_id=" + EnvironmentVariables.ClientId + "&client_secret=" + EnvironmentVariables.ClientSecret, Method.GET);
+            var request = new RestRequest("search/repositories?q=user:steve-burton&sort=stars:&order=asc&?per_page=3?client_id=" + EnvironmentVariables.ClientId + "&client_secret=" + EnvironmentVariables.ClientSecret, Method.GET);
+            request.AddHeader("User-Agent", "steve-burton");
+            //client.Authenticator = new HttpBasicAuthenticator(EnvironmentVariables.ClientId, EnvironmentVariables.ClientSecret);
             var response = new RestResponse();
+            Console.WriteLine(".............response: ................" + response);
             Task.Run(async () =>
             {
                 response = await GetResponseContentAsync(client, request) as RestResponse;
             }).Wait();
-            Console.WriteLine("....................request: ...................................." + request);
             JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(response.Content);
-            var projectList = JsonConvert.DeserializeObject<List<Projects>>(jsonResponse["projects"].ToString());
-            Debug.WriteLine(projectList);
+            Console.WriteLine(".............json response: ................" + jsonResponse);
+            //List<JObject> projectList = JsonConvert.DeserializeObject<List<JObject>>(jsonResponse["items"].ToString());
+            var projectList = JsonConvert.DeserializeObject<List<Projects>>(jsonResponse["items"].ToString());
+            Debug.WriteLine(jsonResponse);
             return projectList;
         }
 
