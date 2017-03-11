@@ -1,5 +1,5 @@
 ﻿body {
-    background-image: url(../img/motorcycle-background.jpg);
+    background-image: url(../img/ptarmagin-traverse.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,8 +12,14 @@ div.header h1 {
     letter-spacing: .01em;
 }
 
+div.header p {
+    font-size: 1.2em;
+    font-weight: 700;
+    text-shadow: 1px 1px 10px white;
+}
+
 ul.nav {
-    margin-top: 4px;
+    /*margin-top: 4px;*/
 }
 
 ul.nav li {
@@ -59,12 +65,18 @@ div.intro ol {
   font-size: 1.1em;
 }
 
-img.john-day {
+div.intro img.diamond-peak {
     width: 300px;
     float: right;
     margin-left: 20px;
     border-radius: 4px;
 }
+
+div.intro p.email {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
 
 /* #### About page styling #### */
 div.about-headline h1 {
@@ -73,6 +85,14 @@ div.about-headline h1 {
     font-weight: 200;
     color: white;
     text-shadow: 2px 2px 20px black;
+}
+
+div.contact {
+    float: right;
+    margin: 20px 8px 0px 0px;
+    text-align: right;
+    font-size: 1.3em;
+    font-weight: 700;
 }
 
 div.about-row {
@@ -131,4 +151,10 @@ div.about a:hover {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 3px;
   font-size: 1.02em;
+}
+
+
+/* #### Projects page styling #### */
+.btn {
+    background-color: #c6c6c6;
 }

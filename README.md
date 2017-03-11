@@ -5,16 +5,16 @@
 ### By **Steve Burton**
 
 ### Specifications
-This is a project to create a personal portfolio website using the Github API.
+This is a project to create a personal portfolio website using the Github API to find my most-starred repos.
 
 
 ## Setup/Installation Requirements
 
 Clone this repository and open it in Visual Studio.
 
-You'll need to add a file with a GitHub API key.
+If you wish, you can add add a file with a GitHub API key, though it isn't necessary for the app to run, or to find my starred projects.
 
-Create the file: Models/EnvironmentVariables.cs
+To do so, create the file: Models/EnvironmentVariables.cs
 
 The contents should look like this:
 

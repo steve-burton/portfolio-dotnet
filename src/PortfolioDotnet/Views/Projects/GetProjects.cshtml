@@ -7,7 +7,7 @@
 @model List<Projects>
 
 <div class="intro">
-    <h3>Here are my three most-starred projects</h3>
+    <h3>Here are my most-starred projects</h3>
     <div>
         <div>
             @foreach (var project in Model)
@@ -15,10 +15,5 @@
                 <p>@Html.DisplayFor(modelItem => project.Name)</p>
             }
         </div>
-
-        @*@for (var i = 0; i <= 3; i++)
-            {
-            <h4>@Model.items[i].name</h4>
-        }*@
     </div>
 </div>
