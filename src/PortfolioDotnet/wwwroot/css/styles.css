@@ -91,14 +91,6 @@ div.about-headline h1 {
     text-shadow: 2px 2px 20px black;
 }
 
-div.contact {
-    float: right;
-    margin: 28px 8px 0px 0px;
-    text-align: right;
-    font-size: 1.3em;
-    font-weight: 700;
-}
-
 div.about-row {
     display: -webkit-flex;
     display: flex;
@@ -138,7 +130,23 @@ div.projects h4 {
     font-weight: 600;
 }
 
+div.contact {
+    float: right;
+    margin: 10px 8px 0px 0px;
+    text-align: right;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+div.resume h1 {
+    font-weight: 600;
+}
+
 div.resume h3 {
+    font-weight: 600;
+}
+
+div.resume h4 {
     font-weight: 600;
 }
 
@@ -229,9 +237,23 @@ div.about a:hover {
     div.intro img.diamond-peak {
         width: 200px;
     }
-    div.projects {
-        display: inline-block;
 
+    div.about-headline h1 {
+        font-size: 5.8em;
+    }
+    div.projects {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    div.spacer-column {
+        width: 10%;
+        display: inline-block;
+        height: 0px;
+    }
+    div.resume {
+        width: 100%;
+        margin-top: 0px;
     }
 }
 
