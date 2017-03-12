@@ -1,4 +1,5 @@
-﻿body {
+﻿/* ###### Shared layout page styling ###### */
+body {
     background-image: url(../img/ptarmagin-traverse.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -10,16 +11,19 @@ div.header h1 {
     font-size: 8em;
     font-weight: 200;
     letter-spacing: .01em;
+    color: white;
+    text-shadow: 1px 1px 20px #5d6f82;
 }
 
 div.header p {
     font-size: 1.2em;
-    font-weight: 700;
-    text-shadow: 1px 1px 10px white;
+    font-weight: 600;
+    text-shadow: 1px 1px 10px #5d6f82;
+    color: white;
 }
 
-ul.nav {
-    /*margin-top: 4px;*/
+ul.nav-tabs li {
+    font-weight: 600;
 }
 
 ul.nav li {
@@ -36,7 +40,7 @@ img.steve {
     margin-top: 15px;
 }
 
-/* ###### Home Index page styling ###### */
+/* ###### Home index page styling ###### */
 div.intro {
     background-color: rgba(255, 255, 255, 0.6);
     padding: 15px 30px 20px 30px;
@@ -89,7 +93,7 @@ div.about-headline h1 {
 
 div.contact {
     float: right;
-    margin: 20px 8px 0px 0px;
+    margin: 28px 8px 0px 0px;
     text-align: right;
     font-size: 1.3em;
     font-weight: 700;
@@ -157,4 +161,92 @@ div.about a:hover {
 /* #### Projects page styling #### */
 .btn {
     background-color: #c6c6c6;
+}
+
+
+/* #### Media Query #### */
+@media screen and (max-width: 1200px) {
+    div.header h1 {
+        font-size: 8em;
+        font-weight: 200;
+        letter-spacing: .01em;
+        color: white;
+        text-shadow: 1px 1px 20px #5d6f82;
+    }
+    
+}
+@media screen and (max-width: 1080px) {
+    div.container {
+        width: 85%;
+    }
+    div.header h1 {
+        font-size: 6.5em;
+        font-weight: 200;
+        letter-spacing: .01em;
+        color: white;
+        text-shadow: 1px 1px 20px #5d6f82;
+        margin-right: 0px;
+    }
+    img.steve {
+        width: 200px;
+        float: right;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    ul.nav {
+        margin-top: 7px;
+    }
+}
+@media screen and (max-width: 950px) {
+    div.header h1 {
+        font-size: 5.5em;
+        font-weight: 200;
+        letter-spacing: .01em;
+        color: white;
+        text-shadow: 1px 1px 20px #5d6f82;
+    }
+    img.steve {
+        width: 180px;
+        float: right;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    ul.nav {
+        margin-top: 3px;
+    }
+}
+@media screen and (max-width: 820px) {
+    div.header h1 {
+        font-size: 5.5em;
+        font-weight: 200;
+        letter-spacing: .01em;
+        color: white;
+        text-shadow: 1px 1px 20px #5d6f82;
+    }
+    div.header img.steve {
+        display: none;
+    }
+    div.intro img.diamond-peak {
+        width: 200px;
+    }
+    div.projects {
+        display: inline-block;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div.header h1 {
+        font-size: 4.5em;
+        font-weight: 200;
+        letter-spacing: .01em;
+        color: white;
+        text-shadow: 1px 1px 20px #5d6f82;
+    }
+    div.intro img.diamond-peak {
+        float: none;
+        margin-left: 0px;
+        margin-bottom: 8px;
+        width: 300px;
+    }
 }
